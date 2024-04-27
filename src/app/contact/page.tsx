@@ -24,15 +24,15 @@ export default function ContactPage() {
       {/* 전화연결 */}
       <div className="mt-4">
         <a className="flex items-center" href="1522-5182">
-          <div className="mr-4 text-3xl font-bold">대표전화</div>
-          <FaHouse size={30} className="mr-2" />
-          <div className="text-3xl font-bold ">1522-5182</div>
+          <div className="mr-4 text-xl font-bold">대표전화</div>
+          <FaHouse size={20} className="mr-2" />
+          <div className="text-xl font-bold ">1522-5182</div>
         </a>
 
         <a className="mt-4 flex items-center" href="010-2892-6100">
-          <div className="mr-4 text-3xl font-bold">상담전화</div>
-          <FaPhoneVolume size={30} className="mr-2" />
-          <div className="text-3xl font-bold">010-2892-6100</div>
+          <div className="mr-4 text-xl font-bold">상담전화</div>
+          <FaPhoneVolume size={20} className="mr-2" />
+          <div className="text-xl font-bold">010-2892-6100</div>
         </a>
       </div>
     </div>
