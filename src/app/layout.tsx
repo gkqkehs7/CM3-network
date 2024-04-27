@@ -10,8 +10,8 @@ import '@/styles/paginate.css';
 
 export const metadata = {
   title: {
-    default: 'Jihoo Kim',
-    template: '%s | Jihoo Kim',
+    default: '(주) CM3네트워크',
+    template: '%s | (주) CM3네트워크',
   },
 };
 
