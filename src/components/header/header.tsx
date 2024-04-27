@@ -12,11 +12,11 @@ const NAV_ITEMS = [
 
 export default function Header() {
   return (
-    <nav className="flex flex-col justify-between py-12 md:flex-row">
+    <nav className="flex flex-col justify-between px-8 py-12 md:flex-row">
       <Link href="/" className="self-start md:self-auto">
         <h1 className="text-3xl font-bold">(주) CM3네트워크</h1>
       </Link>
-      <div className="my-6 flex space-x-8 self-center md:my-0 md:self-auto">
+      <div className="mx-auto my-6 flex space-x-8 self-center md:my-0 md:self-auto">
         <ul className="flex space-x-8">
           {NAV_ITEMS.map((item) => (
             <li
