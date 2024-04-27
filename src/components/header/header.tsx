@@ -16,7 +16,7 @@ export default function Header() {
       <Link href="/" className="self-start md:self-auto">
         <h1 className="text-3xl font-bold">(주) CM3네트워크</h1>
       </Link>
-      <div className="mx-auto my-6 flex space-x-8 self-center md:my-0 md:self-auto">
+      <div className="my-6 flex space-x-8 self-center md:my-0 md:self-auto">
         <ul className="flex space-x-8">
           {NAV_ITEMS.map((item) => (
             <li
