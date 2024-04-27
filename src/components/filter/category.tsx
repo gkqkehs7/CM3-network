@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect } from 'react';
+
 import { useRecoilState, useSetRecoilState } from 'recoil';
 
 import { categoriesState } from '@/states/categories';
@@ -13,21 +15,27 @@ export default function Category({ category }: { category: string }) {
   const active = categories.active.includes(category);
 
   const handleCategoryClick = (category: string) => () => {
-    setCategories((prevCategories) => {
-      if (prevCategories.selected.includes(category)) {
-        return {
-          ...prevCategories,
-          selected: prevCategories.selected.filter(
-            (value) => value !== category
-          ),
-        };
-      } else {
-        return {
-          ...prevCategories,
-          selected: [...prevCategories.selected, category],
-        };
-      }
+    console.log(category);
+
+    setCategories({
+      active: [category],
+      selected: [category],
     });
+    // setCategories((prevCategories) => {
+    //   if (prevCategories.selected.includes(category)) {
+    //     return {
+    //       ...prevCategories,
+    //       selected: prevCategories.selected.filter(
+    //         (value) => value !== category
+    //       ),
+    //     };
+    //   } else {
+    //     return {
+    //       ...prevCategories,
+    //       selected: [...prevCategories.selected, category],
+    //     };
+    //   }
+    // });
 
     setPage(1);
   };
@@ -39,9 +47,7 @@ export default function Category({ category }: { category: string }) {
         checked
           ? 'bg-black text-white ring-[3px] ring-offset-4 dark:bg-white dark:text-black'
           : 'bg-secondary'
-      } ${!active && 'pointer-events-none opacity-25'} ${
-        active && !isTouchDevice() && 'hover:ring-[3px]'
-      }`}
+      }  ${active && !isTouchDevice() && 'hover:ring-[3px]'}`}
     >
       {category}
     </button>

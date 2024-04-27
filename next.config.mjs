@@ -5,6 +5,25 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/blog',
+        permanent: true,
+      },
+    ];
+  },
+
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/blog',
+        permanent: true,
+      },
+    ];
+  },
 
   images: {
     remotePatterns: [
@@ -32,4 +51,4 @@ const nextConfig = {
   },
 };
 
-export default withPlaiceholder(nextConfig)
+export default withPlaiceholder(nextConfig);

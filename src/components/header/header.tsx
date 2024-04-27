@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+import { FaHouse } from 'react-icons/fa6';
+import { FaPhoneVolume } from 'react-icons/fa6';
+
 import NavLink from '@/components/header/nav-link';
 import ThemeToggle from '@/components/theme-toggle';
 
@@ -26,7 +29,24 @@ export default function Header() {
   return (
     <nav className="flex flex-col justify-between px-8 py-12 md:flex-row">
       <Link href="/blog" className="self-start md:self-auto">
-        <h1 className="text-3xl font-bold">(주) CM3네트워크</h1>
+        <div className="flex items-center">
+          <img src="logo.png" className="h-15 w-20" />
+          <h1 className="text-3xl font-bold">(주) CM3네트워크</h1>
+        </div>
+
+        <div className="mt-2 flex">
+          <div className="mr-2 flex items-center">
+            {/* <div className="mr-4 text-xl font-bold">대표전화</div> */}
+            <FaHouse size={20} className="mr-2" />
+            <div className="text-xl font-bold ">1522-5182</div>
+          </div>
+
+          <div className="flex items-center">
+            {/* <div className="mr-4 text-xl font-bold">상담전화</div> */}
+            <FaPhoneVolume size={20} className="mr-2" />
+            <div className="text-xl font-bold">010-2892-6100</div>
+          </div>
+        </div>
       </Link>
       <div className="my-6 flex space-x-8 self-center md:my-0 md:self-auto">
         <ul className="flex space-x-8 ">

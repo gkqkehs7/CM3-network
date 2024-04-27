@@ -2,6 +2,7 @@ import 'katex/dist/katex.min.css';
 import 'prismjs/themes/prism-tomorrow.css';
 import 'react-notion-x/src/styles.css';
 
+import Footer from '@/components/footer/footer';
 import Header from '@/components/header/header';
 import Provider from '@/components/provider';
 import ScrollUpButton from '@/components/scroll-up-button';
@@ -31,6 +32,10 @@ export default function RootLayout({
           </div>
         </Provider>
       </body>
+
+      <footer>
+        <Footer />
+      </footer>
     </html>
   );
 }

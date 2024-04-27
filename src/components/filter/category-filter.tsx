@@ -23,7 +23,7 @@ export default function CategoryFilter({
   return (
     <div className="flex flex-col items-center space-y-4 md:items-start">
       <div className="flex items-center">
-        <h2 className="text-xl font-bold">카테고리</h2>
+        {/* <h2 className="text-xl font-bold">카테고리</h2> */}
         {/* <button
           onClick={handleClearAll}
           className={`relative -right-10 text-xs ${
